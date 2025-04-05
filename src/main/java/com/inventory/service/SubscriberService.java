@@ -46,6 +46,7 @@ public class SubscriberService {
     			InventoryEntity inventoryEntity = checkProduct.get();
     			int stock = inventoryEntity.getStock();
     			Integer requestedQuantity = products.get(product);
+    			   
     			
     			if(requestedQuantity>stock)
     			{
