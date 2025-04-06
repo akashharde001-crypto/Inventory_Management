@@ -54,7 +54,7 @@ public class InventoryController {
             Optional<InventoryEntity> optionalProduct = inventoryRepository.findById(item.getProductId());
 
             if (optionalProduct.isEmpty()) {
-                responseMessage.append("❌ Product not found with ID: ")
+                responseMessage.append("Product not found with ID: ")
                                .append(item.getProductId()).append("\n");
                 continue;
             }
@@ -63,7 +63,7 @@ public class InventoryController {
             product.setStock(product.getStock() + item.getQuantity());
             inventoryRepository.save(product);
 
-            responseMessage.append("✅ Updated stock for product ID ")
+            responseMessage.append("Stock Updated for product ID ")
                            .append(item.getProductId()).append(". New stock: ")
                            .append(product.getStock()).append("\n");
         }
