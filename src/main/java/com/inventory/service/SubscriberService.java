@@ -87,7 +87,7 @@ public class SubscriberService {
 
          
         } else {
-            System.out.println("❌ Order rejected due to stock issues.");
+            System.out.println("Order rejected due to stock issues.");
         }
 
         // Step 4: Acknowledge the message
