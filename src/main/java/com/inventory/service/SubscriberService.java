@@ -14,9 +14,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.cloud.spring.pubsub.support.BasicAcknowledgeablePubsubMessage;
 import com.google.cloud.spring.pubsub.support.GcpPubSubHeaders;
 import com.inventory.dto.InventoryInDto;
-import com.inventory.dto.ResponseOutDto;
 import com.inventory.entity.InventoryEntity;
 import com.inventory.repository.InventoryRepostory;
+
 
 @Service
 public class SubscriberService {
@@ -51,9 +51,12 @@ public class SubscriberService {
     			if(requestedQuantity>stock)
     			{
     				System.out.println("Stock is not sufficient for productId "+ product + "!!");
+    				System.out.println("Available Quantity for Product ID " + product  + " = " + stock + ", Requested Quantity = "+requestedQuantity);
     			}
     			else {
     				System.out.println("All products are available, Order placed." );
+    				System.out.println("Order summary --> " + "Product ID  = " + product + ", Ordered Qty." +   requestedQuantity );
+    				
     			}
     			
             }
