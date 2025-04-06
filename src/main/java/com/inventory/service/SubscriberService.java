@@ -83,7 +83,7 @@ public class SubscriberService {
         	// ✅ Save all updated entities in one go
         	inventoryRepostory.saveAll(productMap.values());
 
-//            System.out.println("✅ Order processed successfully for Product ID !!");
+//            System.out.println("Order processed successfully for Product ID !!");
 
          
         } else {
