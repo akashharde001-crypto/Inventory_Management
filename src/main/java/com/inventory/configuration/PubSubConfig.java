@@ -8,7 +8,6 @@ import org.springframework.messaging.MessageChannel;
 
 import com.google.cloud.spring.pubsub.core.PubSubTemplate;
 import com.google.cloud.spring.pubsub.integration.inbound.PubSubInboundChannelAdapter;
-import com.google.cloud.spring.pubsub.support.converter.SimplePubSubMessageConverter;
 
 @Configuration
 public class PubSubConfig {
